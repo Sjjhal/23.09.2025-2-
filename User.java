@@ -6,7 +6,6 @@ public class User {
     private String password;
     private String role;
 
-    // Конструктор
     public User(int id, String firstName, String lastName, String login, String password, String role) {
         this.id = id;
         this.firstName = firstName;
@@ -16,7 +15,6 @@ public class User {
         this.role = role;
     }
 
-    // Методи (поки що пусті)
     public void register() {}
     public void login() {}
     public void addToFavorites(Book book) {}
