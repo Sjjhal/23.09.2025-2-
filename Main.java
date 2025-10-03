@@ -1,34 +1,17 @@
-public class User {
-    private int id;
-    private String firstName;
-    private String lastName;
-    private String login;
-    private String password;
-    private String role;
+public class Main {
+    public static void main(String[] args) {
+        User user = new User(1, "Іван", "Петренко", "ivan123", "12345", "користувач");
+        Admin admin = new Admin(1, "Олена");
+        Book book = new Book(1, "Кобзар", "Тарас Шевченко", 1840, "Поезія", "електронна книга");
+        Category category = new Category(1, "Класична література");
+        LibraryCatalog catalog = new LibraryCatalog("Центральний каталог");
+        Download download = new Download(1, user, book, "2025-10-03");
 
-    // Конструктор
-    public User(int id, String firstName, String lastName, String login, String password, String role) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.login = login;
-        this.password = password;
-        this.role = role;
-    }
-
-    // Методи (поки що пусті)
-    public void register() {}
-    public void login() {}
-    public void addToFavorites(Book book) {}
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", login='" + login + '\'' +
-                ", role='" + role + '\'' +
-                '}';
+        System.out.println(user);
+        System.out.println(admin);
+        System.out.println(book);
+        System.out.println(category);
+        System.out.println(catalog);
+        System.out.println(download);
     }
 }
